@@ -14,7 +14,7 @@
 	</taskdef>
 
 	<target name="retrieve">
-		<sf:retrieve "${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" retrieveTarget="./DevOps-Prod/src" unpackaged="src/package.xml"/>
+		<sf:retrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" retrieveTarget="./DevOps-Prod/src" unpackaged="./DevOps-Prod/src/package.xml"/>
 	</target>
 
 	<target name="deployValidate">
