@@ -8,14 +8,14 @@
 	</taskdef>
 
 	<target name="retrieve">
-		<sf:retrieve username="${SRC_USERNAME}" password="${SRC_PASSWD}" serverurl="${SRC_URL}" retrieveTarget="src" unpackaged="src/package.xml"/>
+		<sf:retrieve username="${SRC_USERNAME}" password="${SRC_PASSWD}" serverurl="${SRC_URL}" retrieveTarget="./src" unpackaged="src/package.xml"/>
 	</target>
 
 	<target name="deployValidate">
-		<sf:deploy username="${DEST_USERNAME}" password="${DEST_PASSWD}" serverurl="${DEST_URL}" deployRoot="src" rollbackOnError="true" checkonly="true"/>
+		<sf:deploy username="${DEST_USERNAME}" password="${DEST_PASSWD}" serverurl="${DEST_URL}" deployRoot="./src" rollbackOnError="true" checkonly="true"/>
 	</target>
 
 	<target name="deploy">
-		<sf:deploy username="${DEST_USERNAME}" password="${DEST_PASSWD}" serverurl="${DEST_URL}" deployRoot="src" rollbackOnError="true" />
+		<sf:deploy username="${DEST_USERNAME}" password="${DEST_PASSWD}" serverurl="${DEST_URL}" deployRoot="./src" rollbackOnError="true" />
 	</target>
 </project>
